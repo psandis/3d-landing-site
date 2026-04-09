@@ -1,4 +1,4 @@
-# The Landscape — 3D Interactive Experience
+# The Landscape - 3D Interactive Experience
 
 ![3D Landscape Experience](public/3d-landing-site.png)
 
@@ -6,13 +6,13 @@ An interactive 3D landscape built with React and Three.js. Five animated charact
 
 ## Live Features
 
-- **Procedural Terrain** — Height-displaced plane geometry with rolling hills, 80 procedurally placed trees, and 5000 instanced grass blades with sway animation
-- **Five Unique Characters** — Each with distinct appearance (colors, hats, body scale), walking speed, stride animation, and predefined looping paths across the terrain
-- **GPS Tracker HUD** — Draggable panel showing character bios, live GPS coordinates (LAT/LNG/ALT), raw world coordinates (X/Y/Z), animated heartbeat pulse, and live tracking status
-- **POV Camera Mode** — First-person view through any character's eyes with smooth following and look-ahead direction
-- **Tree & Character Avoidance** — Steering behavior with exponential force falloff, hard collision prevention, and stuck detection with automatic waypoint skipping
-- **Atmospheric Sky** — Dynamic sky dome with custom sphere-based clouds that drift across the scene
-- **Intro Screen** — Clean entry experience with "Enter World" button that transitions into exploration mode
+- **Procedural Terrain** - Height-displaced plane geometry with rolling hills, 80 procedurally placed trees, and 5000 instanced grass blades with sway animation
+- **Five Unique Characters** - Each with distinct appearance (colors, hats, body scale), walking speed, stride animation, and predefined looping paths across the terrain
+- **GPS Tracker HUD** - Draggable panel showing character bios, live GPS coordinates (LAT/LNG/ALT), raw world coordinates (X/Y/Z), animated heartbeat pulse, and live tracking status
+- **POV Camera Mode** - First-person view through any character's eyes with smooth following and look-ahead direction
+- **Tree & Character Avoidance** - Steering behavior with exponential force falloff, hard collision prevention, and stuck detection with automatic waypoint skipping
+- **Atmospheric Sky** - Dynamic sky dome with custom sphere-based clouds that drift across the scene
+- **Intro Screen** - Clean entry experience with "Enter World" button that transitions into exploration mode
 
 ## Characters
 
@@ -26,11 +26,11 @@ An interactive 3D landscape built with React and Three.js. Five animated charact
 
 ## Tech Stack
 
-- **Vite** — Dev server and build tool
-- **React 19** — UI framework
-- **React Three Fiber** — React renderer for Three.js
-- **Three.js** — 3D graphics engine
-- **@react-three/drei** — Utility helpers (OrbitControls, Sky)
+- **Vite** - Dev server and build tool
+- **React 19** - UI framework
+- **React Three Fiber** - React renderer for Three.js
+- **Three.js** - 3D graphics engine
+- **@react-three/drei** - Utility helpers (OrbitControls, Sky)
 
 ## Project Structure
 
@@ -50,11 +50,11 @@ src/
     ├── PersonBase.jsx         # Shared character logic (movement, avoidance)
     ├── Limb.jsx               # Animated arm/leg component
     ├── Hat.jsx                # Hat variants (cowboy, beanie, cap)
-    ├── Explorer.jsx           # Alex — blue explorer
-    ├── Hiker.jsx              # Rosa — red hiker with cowboy hat
-    ├── Jogger.jsx             # Kai — green jogger
-    ├── Wanderer.jsx           # Milo — purple wanderer with beanie
-    ├── Scout.jsx              # Zara — teal scout with cap
+    ├── Explorer.jsx           # Alex - blue explorer
+    ├── Hiker.jsx              # Rosa - red hiker with cowboy hat
+    ├── Jogger.jsx             # Kai - green jogger
+    ├── Wanderer.jsx           # Milo - purple wanderer with beanie
+    ├── Scout.jsx              # Zara - teal scout with cap
     ├── FollowCamera.jsx       # First-person POV camera
     ├── navigation.js          # Pathfinding, avoidance, collision logic
     ├── paths.js               # Predefined waypoint paths per character
@@ -85,10 +85,10 @@ The terrain is a 200×200 PlaneGeometry rotated -π/2 around X. Vertex heights a
 
 ### Character Navigation
 Each character follows a predefined loop of waypoints validated against tree positions. Movement includes:
-- **Tree avoidance** — Exponential repulsion force within 5-unit radius
-- **Person avoidance** — Characters steer away from each other (3-unit radius)
-- **Hard collision** — Movement blocked if destination is inside a tree trunk
-- **Stuck detection** — If a character moves less than 0.5 units/sec for 0.8s, it skips to the next waypoint
+- **Tree avoidance** - Exponential repulsion force within 5-unit radius
+- **Person avoidance** - Characters steer away from each other (3-unit radius)
+- **Hard collision** - Movement blocked if destination is inside a tree trunk
+- **Stuck detection** - If a character moves less than 0.5 units/sec for 0.8s, it skips to the next waypoint
 
 ### GPS Tracker
 The HUD converts world coordinates to simulated GPS values:
@@ -103,13 +103,13 @@ When activated, the camera positions at eye height (2.3 units) slightly behind t
 
 ## Controls
 
-- **Mouse drag** — Rotate camera (OrbitControls)
-- **Scroll** — Zoom in/out
-- **Click character** — Select for tracking
-- **Tracker → POV CAM** — Enter first-person view
-- **Tracker → RESET CAM** — Return to default view
-- **Top bar → Tracker** — Toggle HUD visibility
-- **Top bar → Exit** — Return to intro screen
+- **Mouse drag** - Rotate camera (OrbitControls)
+- **Scroll** - Zoom in/out
+- **Click character** - Select for tracking
+- **Tracker → POV CAM** - Enter first-person view
+- **Tracker → RESET CAM** - Return to default view
+- **Top bar → Tracker** - Toggle HUD visibility
+- **Top bar → Exit** - Return to intro screen
 
 ---
 
